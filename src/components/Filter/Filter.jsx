@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { Div, Label, Input } from './Filter.styled';
 
 import { useDispatch, useSelector } from 'react-redux';
@@ -7,11 +6,11 @@ import { setFilter } from 'redux/filterSlice';
 
 const Filter = () => {
   const filter = useSelector(selectFilter);
+
   const dispatch = useDispatch();
-  console.log(filter);
+
   const changeFilter = event => {
     const query = event.target.value;
-    console.log(query);
     dispatch(setFilter(query));
   };
 

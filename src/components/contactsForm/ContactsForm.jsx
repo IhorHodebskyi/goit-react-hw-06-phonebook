@@ -9,36 +9,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/contactSlice';
 import { selectContacts } from 'redux/selectors';
 export const ContactsForm = () => {
-  // const [name, setName] = useState('');
-  // const [number, setNumber] = useState('');
-  //==========
+
   const dispatch = useDispatch();
   const { items } = useSelector(selectContacts);
-  //==========
-  // const getVisibleContacts = () => {
-  //   const normalizedFilter = filter.toLowerCase();
 
-  //   return contacts.filter(contact =>
-  //     contact.name.toLowerCase().includes(normalizedFilter),
-  //   );
-  // };
-  //===============
   const nameInputId = nanoid();
   const numberInputId = nanoid();
 
-  // const handleChange = evt => {
-  //   const { name, value } = evt.target;
-  //   switch (name) {
-  //     case 'name':
-  //       setName(value);
-  //       break;
-  //     case 'number':
-  //       setNumber(value);
-  //       break;
-  //     default:
-  //       return;
-  //   }
-  // };
 
   const handleSubmit = evt => {
     evt.preventDefault();
