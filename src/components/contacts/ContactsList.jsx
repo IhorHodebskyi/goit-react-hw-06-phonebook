@@ -12,13 +12,14 @@ const ContactList = () => {
 
     const contacts = useSelector(state => {
         const normalizedFilter = filter.toLowerCase();
+        console.log(state.app.contacts.items);
         return state.app.contacts.items.filter(contact =>
             contact.name
                 .toLowerCase()
                 .includes(normalizedFilter),
         );
     });
-
+    console.log(contacts);
     const onRemoveContact = id => {
         dispatch(deleteContact(id));
     };
