@@ -19,7 +19,6 @@ const ContactList = () => {
                 .includes(normalizedFilter),
         );
     });
-    console.log(contacts);
     const onRemoveContact = id => {
         dispatch(deleteContact(id));
     };
